@@ -1,0 +1,51 @@
+{
+  "criteria": {
+    "smite": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "mainhand": {
+              "enchantments": [
+                {
+                  "enchantment": "minecraft:smite"
+                }
+              ]
+            }
+          }
+        },
+        "entity": {
+          "nbt": "{Tags:[\"smitelib.smite\"]}"
+        }
+      }
+    },
+    "bane": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "mainhand": {
+              "enchantments": [
+                {
+                  "enchantment": "minecraft:bane_of_arthropods"
+                }
+              ]
+            }
+          }
+        },
+        "entity": {
+          "nbt": "{Tags:[\"smitelib.bane\"]}"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smite",
+      "bane"
+    ]
+  ],
+  "rewards": {
+    "function": "smitelib:start"
+  }
+}
